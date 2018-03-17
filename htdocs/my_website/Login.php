@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 ?>
 <?php
@@ -18,7 +18,7 @@ if(isset($_POST["btn_submit"])){
 		echo "Username and Password cannot be empty. <a href='javascript: history.go(-1)'>Back</a>";
 	}else{
 		$password = md5($password);
-		$sql = "select * from tb_user where username = '$username'";
+		$sql = "select * from user where username = '$username'";
 		$query = mysqli_query($conn, $sql);
 		$num_row = mysqli_num_rows($query);
 		$data = mysqli_fetch_array($query);
